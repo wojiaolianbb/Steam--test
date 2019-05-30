@@ -5,6 +5,76 @@ body {
   overflow-x: hidden;
   background: #2a475e;
 }
+body .banner {
+  width: 600px;
+  height: 338px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+body .banner:hover a {
+  display: inline-block;
+}
+body .banner a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px dashed greenyellow;
+  position: absolute;
+  background: lightgreen;
+  opacity: .5;
+  display: none;
+}
+body .banner a:hover {
+  opacity: 1;
+}
+body .banner .bannerInner {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .banner .bannerInner div {
+  display: none;
+  float: left;
+}
+body .banner .bannerInner div img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+body .banner .bannerInner div img .bg {
+  display: block;
+}
+body .uls {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+}
+body .uls li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 10px;
+  background: lightblue;
+  cursor: pointer;
+}
+body .uls li.bg {
+  background: lightcoral;
+}
+body .banner a.bannerLeft {
+  z-index: 10;
+  left: 10px;
+  top: 160px;
+}
+body .banner a.bannerRight {
+  z-index: 10;
+  right: 10px;
+  top: 160px;
+}
 body h2 {
   font-size: 14px;
   text-transform: uppercase;
@@ -115,15 +185,15 @@ body header .action .lang {
   background-repeat: no-repeat;
   cursor: pointer;
 }
-body #banner {
+body #banner1 {
   position: relative;
 }
-body #banner .banner-video {
+body #banner1 .banner-video {
   margin-left: 50%;
   transform: translateX(-50%);
   display: block;
 }
-body #banner .ban-nav {
+body #banner1 .ban-nav {
   background: rgba(62, 126, 167, 0.8);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -133,26 +203,26 @@ body #banner .ban-nav {
   padding-right: 7px;
   line-height: 34px;
 }
-body #banner .ban-nav .ban-navbox {
+body #banner1 .ban-nav .ban-navbox {
   margin-bottom: 0;
 }
-body #banner .ban-nav .ban-navbox > li {
+body #banner1 .ban-nav .ban-navbox > li {
   position: relative;
   padding: 0 15px;
   float: left;
   border-right: 1px solid rgba(16, 21, 25, 0.3);
 }
-body #banner .ban-nav .ban-navbox > li:hover .subnav {
+body #banner1 .ban-nav .ban-navbox > li:hover .subnav {
   display: block;
 }
-body #banner .ban-nav .ban-navbox > li:hover {
+body #banner1 .ban-nav .ban-navbox > li:hover {
   background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
 }
-body #banner .ban-nav .ban-navbox > li:hover > a {
+body #banner1 .ban-nav .ban-navbox > li:hover > a {
   color: #000;
   text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
 }
-body #banner .ban-nav .ban-navbox > li .subnav {
+body #banner1 .ban-nav .ban-navbox > li .subnav {
   position: absolute;
   left: 0;
   box-shadow: 0 0 12px #000000;
@@ -161,22 +231,22 @@ body #banner .ban-nav .ban-navbox > li .subnav {
   display: none;
   z-index: 10;
 }
-body #banner .ban-nav .ban-navbox > li .subnav i {
+body #banner1 .ban-nav .ban-navbox > li .subnav i {
   display: block;
   margin: 5px 0px;
   background-color: #fff;
   height: 1px;
 }
-body #banner .ban-nav .ban-navbox > li .subnav > li:hover {
+body #banner1 .ban-nav .ban-navbox > li .subnav > li:hover {
   background: #212d3d;
 }
-body #banner .ban-nav .ban-navbox > li .subnav > li:hover > a {
+body #banner1 .ban-nav .ban-navbox > li .subnav > li:hover > a {
   color: #fff;
 }
-body #banner .ban-nav .ban-navbox > li .subnav > li .li-blue {
+body #banner1 .ban-nav .ban-navbox > li .subnav > li .li-blue {
   color: #4f94bc;
 }
-body #banner .ban-nav .ban-navbox > li .subnav > li a {
+body #banner1 .ban-nav .ban-navbox > li .subnav > li a {
   padding: 0 15px;
   white-space: nowrap;
   color: #000;
@@ -184,7 +254,7 @@ body #banner .ban-nav .ban-navbox > li .subnav > li a {
   font-size: 13px;
   font-weight: normal;
 }
-body #banner .ban-nav .ban-navbox > li span {
+body #banner1 .ban-nav .ban-navbox > li span {
   background: url(../img/btn_arrow_down_padded_white.png) no-repeat center;
   width: 19px;
   height: 12px;
@@ -192,19 +262,19 @@ body #banner .ban-nav .ban-navbox > li span {
   cursor: pointer;
   vertical-align: text-bottom;
 }
-body #banner .ban-nav .ban-navbox > li .no-pic {
+body #banner1 .ban-nav .ban-navbox > li .no-pic {
   background: none;
 }
-body #banner .ban-nav .ban-navbox > li a {
+body #banner1 .ban-nav .ban-navbox > li a {
   color: #d9dadd;
   font-size: 13px;
   line-height: 34px;
   font-weight: 300;
 }
-body #banner .ban-nav .ban-navbox .ban-search {
+body #banner1 .ban-nav .ban-navbox .ban-search {
   float: right;
 }
-body #banner .ban-nav .ban-navbox .ban-search input {
+body #banner1 .ban-nav .ban-navbox .ban-search input {
   font-style: italic;
   background-color: #316282;
   border-radius: 3px;
@@ -216,10 +286,10 @@ body #banner .ban-nav .ban-navbox .ban-search input {
   line-height: 26px;
   padding: 0px 6px;
 }
-body #banner .ban-nav .ban-navbox .ban-search input:focus::-webkit-input-placeholder {
+body #banner1 .ban-nav .ban-navbox .ban-search input:focus::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0);
 }
-body #banner .ban-nav .ban-navbox .ban-search i {
+body #banner1 .ban-nav .ban-navbox .ban-search i {
   width: 25px;
   height: 25px;
   position: absolute;
