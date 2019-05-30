@@ -1,0 +1,180 @@
+@charset "utf-8";
+
+body {
+    font-family: "Motiva Sans",
+        "Sans-serif";
+    font-size: 14px;
+    overflow-x: hidden;
+    background: #1b2838;
+}
+
+header {
+    width: 100%;
+    background: #171a21;
+    padding: 0 16px;
+    height: 104px;
+
+    .nav-content {
+        width: 940px;
+        margin: 0px auto;
+        position: relative;
+    }
+
+    .logo>h1 {
+        float: left;
+        padding-top: 30px;
+        margin-right: 40px;
+        width: 176px;
+        height: 44px;
+    }
+
+    .nav {
+        ul>li {
+            float: left;
+            position: relative;
+
+            &:hover .subnav {
+                display: block;
+            }
+
+            &:hover a {
+                color: #fff;
+            }
+
+            a {
+                display: block;
+                padding: 45px 7px 7px;
+                line-height: 16px;
+                font-size: 14px;
+                color: #b8b6b4;
+                text-transform: uppercase;
+            }
+
+            .subnav {
+                display: none;
+                position: absolute;
+                left: 1px;
+                top: 64px;
+                background: #171a21;
+                width: 5em;
+                padding: 5px 15px 10px 15px;
+                box-shadow: 3px 3px 5px -3px #000;
+                text-align: left;
+                z-index: 10;
+
+                li:hover a {
+                    color: #fff;
+                }
+
+                a {
+                    display: block;
+                    padding: 6px 15px 6px 0;
+                    text-transform: uppercase;
+                    font-size: 11px;
+                    color: #b8b6b4;
+                }
+            }
+        }
+    }
+
+    .action {
+        position: absolute;
+        right: 0px;
+        top: 6px;
+        height: 21px;
+        line-height: 21px;
+        color: #b8b6b4;
+        font-size: 11px;
+        z-index: 401;
+
+        li {
+            float: left;
+
+            &:hover a {
+                color: #fff;
+            }
+
+            a {
+                color: #b8b6b4;
+                padding: 0 4px;
+                vertical-align: top;
+                line-height: 24px;
+            }
+        }
+
+        .download {
+            color: #b8b6b4;
+            padding-left: 35px;
+            padding-right: 9px;
+            background: #5c7e10 url(../img/btn_header_installsteam_download.png) no-repeat 10px 5px;
+            line-height: 24px;
+            display: inline-block;
+            position: relative;
+            margin-right: 3px;
+
+            a {
+                line-height: 24px;
+
+            }
+        }
+
+        .lang {
+            padding-right: 18px;
+            background-image: url(../img/btn_arrow_down_padded.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    }
+}
+
+#footer {
+    color: #c6d4df;
+    font-size: 12px;
+    padding: 16px 0 60px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+
+    .footer-content {
+        width: 940px;
+        margin: 0px auto;
+        padding-top: 16px;
+
+        .line {
+            height: 8px;
+            border-top: 1px solid #29363d;
+        }
+
+        .footer-text>div {
+            float: left;
+        }
+
+        .footer-low {
+            margin-left: 12px;
+            color: #8F98A0;
+            font-size: 12px;
+            line-height: 16px;
+
+            &>div>a {
+                color: #C6D4DF;
+            }
+        }
+
+        .footer-logo-r {
+            margin-left: 130px;
+        }
+
+        .valve_links {
+            margin-top: 8px;
+
+            &>a {
+                color: #C6D4DF;
+                font-size: 13px;
+
+                &>img {
+                    display: inline;
+                    vertical-align: bottom;
+                }
+            }
+        }
+    }
+}

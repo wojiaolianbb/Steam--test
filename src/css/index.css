@@ -1,0 +1,199 @@
+@charset "utf-8";
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+#ban-nav {
+  margin: 0 auto;
+  background: rgba(62, 126, 167, 0.8);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+#ban-nav .ban-navbox {
+  margin: 30px;
+}
+#ban-nav .ban-navbox > li {
+  position: relative;
+  padding: 0 15px;
+  float: left;
+  border-right: 1px solid rgba(16, 21, 25, 0.3);
+}
+#ban-nav .ban-navbox > li:hover .subnav {
+  display: block;
+}
+#ban-nav .ban-navbox > li:hover {
+  background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+}
+#ban-nav .ban-navbox > li:hover > a {
+  color: #000;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
+}
+#ban-nav .ban-navbox > li .subnav {
+  position: absolute;
+  left: 0;
+  box-shadow: 0 0 12px #000000;
+  background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+  padding: 8px 5px 8px 5px;
+  display: none;
+  z-index: 10;
+}
+#ban-nav .ban-navbox > li .subnav i {
+  display: block;
+  margin: 5px 0px;
+  background-color: #fff;
+  height: 1px;
+}
+#ban-nav .ban-navbox > li .subnav > li:hover {
+  background: #212d3d;
+}
+#ban-nav .ban-navbox > li .subnav > li:hover > a {
+  color: #fff;
+}
+#ban-nav .ban-navbox > li .subnav > li .li-blue {
+  color: #4f94bc;
+}
+#ban-nav .ban-navbox > li .subnav > li a {
+  padding: 0 15px;
+  white-space: nowrap;
+  color: #000;
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+}
+#ban-nav .ban-navbox > li span {
+  background: url(../img/btn_arrow_down_padded_white.png) no-repeat center;
+  width: 19px;
+  height: 12px;
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: text-bottom;
+}
+#ban-nav .ban-navbox > li .no-pic {
+  background: none;
+}
+#ban-nav .ban-navbox > li a {
+  color: #d9dadd;
+  font-size: 13px;
+  line-height: 34px;
+  font-weight: 300;
+}
+#ban-nav .ban-navbox .ban-search {
+  float: right;
+  margin: 3px 3px 0 0;
+  position: relative;
+}
+#ban-nav .ban-navbox .ban-search input {
+  font-style: italic;
+  background-color: #316282;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: #0e1c25;
+  font-size: 14px;
+  width: 180px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px 6px;
+}
+#ban-nav .ban-navbox .ban-search input:focus::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+#ban-nav .ban-navbox .ban-search i {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 1px;
+  right: 3px;
+  background-image: url(../img/search_icon_btn.png);
+}
+#page-main {
+  color: #c6d4df;
+  font-size: 12px;
+}
+#page-main h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+  margin: 0 0 10px;
+}
+#page-main .p-left {
+  float: left;
+  padding: 16px;
+  padding-bottom: 14px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#page-main .p-left .login {
+  float: left;
+  padding-bottom: 16px;
+}
+#page-main .p-left .login > input {
+  font-size: 16px;
+  line-height: 21px;
+  width: 275px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  box-shadow: 1px 1px 0px #45556c;
+  padding: 5px;
+  margin: 4px 0;
+}
+#page-main .p-left .line {
+  float: left;
+  border-left: 1px solid #264959;
+  width: 2px;
+  height: 210px;
+  margin: 0 16px;
+}
+#page-main .p-left .creat {
+  width: 275px;
+  float: left;
+  min-height: 250px;
+  padding-bottom: 16px;
+}
+#page-main .p-left > div > button {
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 25px 0;
+  cursor: pointer;
+  color: #67c1f5;
+  border-radius: 2px;
+  border: none;
+  background: rgba(103, 193, 245, 0.2);
+}
+#page-main .p-left > div > button:nth-of-type(2) {
+  margin-left: 250px;
+}
+#page-main .p-right {
+  width: 275px;
+  margin-left: 14px;
+  float: right;
+  min-height: 364px;
+  padding: 16px 2px 4px 16px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#page-main .p-right > img {
+  display: block;
+}
+#page-main .p-right .why_list > li {
+  list-style: square;
+  list-style-position: inside;
+}
+#page-main .p-right .why_list > li > a {
+  line-height: 22px;
+  color: #c6d4df;
+}
+#forget-pwd {
+  margin-bottom: 80px;
+}
+#forget-pwd > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+}
+#forget-pwd > a:nth-of-type(2) {
+  float: right;
+  margin-top: 20px;
+}

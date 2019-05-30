@@ -11,7 +11,7 @@
                 timer = null, //计时器
                 elems = {}, //命名空间，用于选取元素
                 defaults = {
-                    speed: 200, //动画时间
+                    speed: 600, //动画时间
                     delay: 3000 //展示时间
                 };
             options = $.extend(defaults, options); //合并参数

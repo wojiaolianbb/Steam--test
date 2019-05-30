@@ -102,7 +102,6 @@ body header .action .download {
   line-height: 24px;
   display: inline-block;
   position: relative;
-  height: 21px;
   margin-right: 3px;
 }
 body header .action .download a {
@@ -693,8 +692,10 @@ body #login .log-content .login-in {
   font-size: 15px;
   line-height: 30px;
   border-radius: 3px;
-  color: #fff;
   margin-top: 15px;
+}
+body #login .log-content .login-in > a {
+  color: #fff;
 }
 body #login .log-content .free-log {
   font-size: 15px;
