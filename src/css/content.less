@@ -9,90 +9,6 @@ body {
     overflow-x: hidden;
     background: #2a475e;
 
-    .banner {
-        width: 600px;
-        height: 338px;
-        margin: 0 auto;
-        position: relative;
-        overflow: hidden;
-
-        &:hover a {
-            display: inline-block;
-        }
-
-        a {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            border: 2px dashed greenyellow;
-            position: absolute;
-            background: lightgreen;
-            opacity: .5;
-            display: none;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-
-        .bannerInner {
-            width: 600px;
-            height: 300px;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            div {
-                display: none;
-                float: left;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    opacity: 1;
-
-                    .bg {
-                        display: block;
-                    }
-                }
-            }
-        }
-    }
-
-    .uls {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-        z-index: 10;
-
-        li {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            float: left;
-            margin-left: 10px;
-            background: lightblue;
-            cursor: pointer;
-        }
-
-        li.bg {
-            background: lightcoral;
-        }
-    }
-
-
-    .banner a.bannerLeft {
-        z-index: 10;
-        left: 10px;
-        top: 160px;
-    }
-
-    .banner a.bannerRight {
-        z-index: 10;
-        right: 10px;
-        top: 160px;
-    }
-
     h2 {
         font-size: 14px;
         text-transform: uppercase;
@@ -587,100 +503,108 @@ body {
                     }
                 }
 
-                .main-home-2 .special_price>ul>li {
-                    position: relative;
-                    float: left;
-                    margin-right: 10px;
-                    margin-top: 10px;
-                    box-shadow: 0 0 5px #000;
-                    padding-bottom: 40px;
+                .main-home-2 {
+                    margin: 0 auto;
 
-                    &:nth-of-type(1),
-                    &:nth-of-type(4) {
-                        background: linear-gradient(to bottom, #ffffff 5%, #abdaf4 95%);
-                    }
+                    .special_price {
 
-                    &:nth-of-type(2),
-                    &:nth-of-type(3),
-                    &:nth-of-type(5),
-                    &:nth-of-type(6) {
-                        background: url(../img/background_spotlight.jpg);
-                    }
-
-                    .dailyconst {
-                        position: absolute;
-                        right: 0;
-
-                        .priceradio {
-                            line-height: 30px;
-                            margin: 5px 0px;
-                            font-size: 26px;
-                            color: #a4d007;
-                            background: #4c6b22;
+                        &>ul>li {
+                            position: relative;
                             float: left;
-                            padding: 0 5px;
-                        }
+                            margin: 10px;
+                            box-shadow: 0 0 5px #000;
+                            padding-bottom: 40px;
 
-                        .pricedetial {
-                            background-color: rgba(20, 31, 44, 0.8);
-                            border-radius: 1px;
-                            line-height: 13px;
-                            padding: 4px 3px 0 3px;
-                            float: right;
-                            margin: 5px 5px 0 0;
-
-                            &>.oldprice {
-                                display: block;
-                                text-decoration: line-through;
-                                color: #626366;
-                                font-size: 11px;
+                            &:nth-of-type(1),
+                            &:nth-of-type(4) {
+                                background: linear-gradient(to bottom, #ffffff 5%, #abdaf4 95%);
                             }
 
-                            &>.newprice {
-                                color: #acdbf5;
-                                font-size: 13px;
-                            }
-                        }
-                    }
-
-                    .dailydeal {
-                        position: absolute;
-                        text-align: left;
-                        color: #283846;
-                        width: 100%;
-
-                        .dailytime {
-                            display: inline-block;
-
-                            span {
-                                display: block;
-                                font-size: 10px;
-                                line-height: 13px;
-                                padding: 0 5px;
-                                margin-top: 4px;
+                            &:nth-of-type(2),
+                            &:nth-of-type(3),
+                            &:nth-of-type(5),
+                            &:nth-of-type(6) {
+                                background: url(../img/background_spotlight.jpg);
                             }
 
-                        }
+                            .dailyconst {
+                                position: absolute;
+                                right: 0;
 
-                        .priceradio {
-                            float: right;
-                            line-height: 30px;
-                            font-size: 26px;
-                            color: #a4d007;
-                            background: #4c6b22;
-                            text-align: right;
-                            margin: 5px 5px 5px 5px;
-                        }
-                    }
+                                .priceradio {
+                                    line-height: 30px;
+                                    margin: 5px 0px;
+                                    font-size: 26px;
+                                    color: #a4d007;
+                                    background: #4c6b22;
+                                    float: left;
+                                    padding: 0 5px;
+                                }
 
-                    &>a>img {
-                        width: 100%;
+                                .pricedetial {
+                                    background-color: rgba(20, 31, 44, 0.8);
+                                    border-radius: 1px;
+                                    line-height: 13px;
+                                    padding: 4px 3px 0 3px;
+                                    float: right;
+                                    margin: 5px 5px 0 0;
+
+                                    &>.oldprice {
+                                        display: block;
+                                        text-decoration: line-through;
+                                        color: #626366;
+                                        font-size: 11px;
+                                    }
+
+                                    &>.newprice {
+                                        color: #acdbf5;
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+
+                            .dailydeal {
+                                position: absolute;
+                                text-align: left;
+                                color: #283846;
+                                width: 100%;
+
+                                .dailytime {
+                                    display: inline-block;
+
+                                    span {
+                                        display: block;
+                                        font-size: 10px;
+                                        line-height: 13px;
+                                        padding: 0 5px;
+                                        margin-top: 4px;
+                                    }
+
+                                }
+
+                                .priceradio {
+                                    float: right;
+                                    line-height: 30px;
+                                    font-size: 26px;
+                                    color: #a4d007;
+                                    background: #4c6b22;
+                                    text-align: right;
+                                    margin: 5px 5px 5px 5px;
+                                }
+                            }
+
+                            &>a>img {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
+
 
                 .main-home-3 {
                     .btn-wrapper {
                         width: 2000px;
+                        margin-bottom: 40px;
 
                         &>ul>li {
                             float: left;
@@ -898,6 +822,101 @@ body {
                     }
                 }
 
+            }
+        }
+    }
+
+    #login {
+        margin-top: 50px;
+        background-color: #000;
+        padding: 25px 0;
+
+        .log-content {
+            padding-left: 234px;
+            text-align: center;
+            margin-top: 5px;
+
+            .more-content {
+                font-size: 24px;
+                color: #67c1f5;
+            }
+
+            .home-page {
+                margin-top: 25px;
+                font-size: 15px;
+                color: #8f98a0;
+            }
+
+            .login-in {
+                background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+                display: inline-block;
+                padding: 0 15px;
+                font-size: 15px;
+                line-height: 30px;
+                border-radius: 3px;
+                color: #fff;
+                margin-top: 15px;
+            }
+
+            .free-log {
+                font-size: 15px;
+                color: #8f98a0;
+
+                &>a {
+                    color: #ffffff;
+                }
+            }
+        }
+
+    }
+
+    #footer {
+        color: #c6d4df;
+        font-size: 12px;
+        padding: 16px 0 60px 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%);
+
+        .footer-content {
+            width: 940px;
+            margin: 0px auto;
+            padding-top: 16px;
+
+            .line {
+                height: 8px;
+                border-top: 1px solid #29363d;
+            }
+
+            .footer-text>div {
+                float: left;
+            }
+
+            .footer-low {
+                margin-left: 12px;
+                color: #8F98A0;
+                font-size: 12px;
+                line-height: 16px;
+
+                &>div>a {
+                    color: #C6D4DF;
+                }
+            }
+
+            .footer-logo-r {
+                margin-left: 130px;
+            }
+
+            .valve_links {
+                margin-top: 8px;
+
+                &>a {
+                    color: #C6D4DF;
+                    font-size: 13px;
+
+                    &>img {
+                        display: inline;
+                        vertical-align: bottom;
+                    }
+                }
             }
         }
     }
