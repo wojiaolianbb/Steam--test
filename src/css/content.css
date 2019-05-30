@@ -281,6 +281,7 @@ body #main .main-range .main-content .main-home > h2 {
 }
 body #main .main-range .main-content .main-home .slider {
   box-shadow: 0 0 7px 0px #000;
+  overflow: hidden;
   position: relative;
   margin-left: 50px;
   width: 865px;
