@@ -14,5 +14,13 @@
   "devDependencies": {
     "gulp": "^4.0.2"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wojiaolianbb/Steam--test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wojiaolianbb/Steam--test/issues"
+  },
+  "homepage": "https://github.com/wojiaolianbb/Steam--test#readme"
 }

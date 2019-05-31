@@ -8,7 +8,7 @@
     <title>steam-login</title>
     <link rel="stylesheet" href="../css/header-footer.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
 
 </head>
@@ -134,10 +134,10 @@
                 <p>到现有的 Steam 帐户</p>
                 <br>
                 <p>Steam 帐户名称</p>
-                <input type="text" name="" id="username">
+                <input type="text" name="username" id="username">
                 <br>
                 <p>密码</p>
-                <input type="password" name="" id="password">
+                <input type="password" name="password" id="password">
             </div>
             <div class="line"></div>
             <div class="creat">
@@ -147,10 +147,15 @@
                 <p>欢迎免费加入及轻松使用。继续创建 Steam 帐户并获取 Steam - 适合 PC 和 Mac 玩家的前沿数字解决方案。</p>
             </div>
             <div>
-                <button>登陆</button>
-                <button>加入steam</button>
+                <button class="login-in">登陆</button>
+                <button class="join">加入steam</button>
             </div>
+            <div class="forget-pwd"> <a href="javascript:;">忘记您的密码?</a></div>
+
         </div>
+
+
+
         <div class="p-right">
             <h2>为什么加入 STEAM？</h2>
             <ol class="why_list">
@@ -163,12 +168,12 @@
             </ol>
             <br>
             <img src="../img/why_join_preview.png" alt="">
+            <div class="forget-pwd"> <a href="javascript:;">了解更多 Steam 的相关信息</a></div>
         </div>
+
+
     </section>
-    <section id="forget-pwd" class="wrapper clear">
-        <a href="javascript:;">忘记您的密码？</a>
-        <a href="javascript:;">了解更多 Steam 的相关信息</a>
-    </section>
+
     <footer id="footer">
         <div class="footer-content">
             <div class="line"></div>
@@ -205,6 +210,9 @@
         </div>
         </div>
     </footer>
+
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>

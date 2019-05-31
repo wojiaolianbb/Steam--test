@@ -1,3 +1,4 @@
+;
 $(function () {
     $('.main-home-5>ul>li').on('click', function () {
         var index = $('.main-home-5>ul>li').index(this);
@@ -10,4 +11,5 @@ $(function () {
         $('.slider>div').css('left', '-' + '910' * index + 'px');
         $(this).addClass('active').siblings().removeClass('active');
     });
+    
 })
