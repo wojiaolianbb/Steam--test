@@ -5,6 +5,7 @@ $(function () {
     $(".login-in").on("click", function () {
         let src = document.createElement("script")
         src.src = "http://127.0.0.1:8080/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";
+        // src.src = "E:/1.培训/JS/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";        document.body.appendChild(src);
         document.body.appendChild(src);
 
         function callback(data) {
@@ -31,9 +32,9 @@ $(function () {
         'password': /^\w{6,}$/, //输入起码六位 的 密码，字母数字 下划线
         'password-yz': /^\w{6,}$/, //验证密码，字母数字 下划线
     }
-
+    // 除了密码外所有的input内容填写正确
     $("input[id!='checkpass']").on("keyup", function () {
-        
+
         if (reg[this.id].test(this.value)) {
             this.dataset.pass = "true";
             $(this).next().html('✔');
@@ -43,6 +44,7 @@ $(function () {
         }
         check()
     })
+    // 判断两个密码是否相同
     $("#checkpass").on("keyup", function () {
         if ($(this).val() === $('#password').val()) {
             this.dataset.pass = "true";
@@ -55,7 +57,7 @@ $(function () {
         }
         check()
     })
-
+    // 判断是否所有的input是否都填写，填写了发jsonp请求
     function check() {
         if ($('input[data-pass="true"]').length == 3) {
             $("#joinus").on("click", function () {
@@ -66,14 +68,11 @@ $(function () {
                 function callback(data) {
                     if (data.has) {
                         alert("注册成功,点击后跳转登陆")
-                        location.href="../html/login.html"
+                        location.href = "../html/login.html"
                     }
                 }
                 window.callback = callback;
             })
         }
     }
-
-
-
 })
