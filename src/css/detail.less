@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+#ban-nav {
+    margin: 0 auto;
+    background: rgba(62, 126, 167, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+
+    .ban-navbox {
+        margin: 30px;
+
+        &>li {
+            position: relative;
+            padding: 0 15px;
+            float: left;
+            border-right: 1px solid rgba(16, 21, 25, 0.3);
+
+            &:hover .subnav {
+                display: block
+            }
+
+            &:hover {
+                background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+            }
+
+            &:hover>a {
+                color: #000;
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
+            }
+
+            .subnav {
+                position: absolute;
+                left: 0;
+                box-shadow: 0 0 12px #000000;
+                background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+                padding: 8px 5px 8px 5px;
+                display: none;
+                z-index: 10;
+
+                i {
+                    display: block;
+                    margin: 5px 0px;
+                    background-color: #fff;
+                    height: 1px;
+                }
+
+                &>li {
+                    &:hover {
+                        background: #212d3d;
+                    }
+
+                    &:hover>a {
+                        color: #fff;
+                    }
+
+                    .li-blue {
+                        color: #4f94bc;
+                    }
+
+                    a {
+                        padding: 0 15px;
+                        white-space: nowrap;
+                        color: #000;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: normal;
+                    }
+
+                }
+
+            }
+
+            span {
+                background: url(../img/btn_arrow_down_padded_white.png) no-repeat center;
+                width: 19px;
+                height: 12px;
+                display: inline-block;
+                cursor: pointer;
+                vertical-align: text-bottom;
+            }
+
+            .no-pic {
+                background: none;
+            }
+
+            a {
+                color: #d9dadd;
+                font-size: 13px;
+                line-height: 34px;
+                font-weight: 300;
+            }
+
+
+        }
+
+        .ban-search {
+            float: right;
+            margin: 3px 3px 0 0;
+            position: relative;
+
+            input {
+
+                font-style: italic;
+                background-color: #316282;
+                border-radius: 3px;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                color: #0e1c25;
+                font-size: 14px;
+                width: 180px;
+                height: 26px;
+                line-height: 26px;
+                padding: 0px 6px;
+
+                &:focus {
+                    &::-webkit-input-placeholder {
+                        color: rgba(0, 0, 0, 0)
+                    }
+                }
+
+            }
+
+            i {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 1px;
+                right: 3px;
+                background-image: url(../img/search_icon_btn.png);
+            }
+        }
+    }
+}
+
+#main-page {
+    .blockbg {
+        color: #56707f;
+        font-size: 12px;
+
+        &>a {
+            color: #8f98a0;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .game-name {
+        min-height: 46px;
+
+        .g-name {
+            font-size: 26px;
+            line-height: 32px;
+            text-overflow: ellipsis;
+            color: white;
+            float: left;
+        }
+
+        .community-center {
+            float: right;
+            border-radius: 2px;
+            border: none;
+            padding: 1px;
+            cursor: pointer;
+            color: #67c1f5;
+            background: rgba(103, 193, 245, 0.2);
+            padding: 0 15px;
+            font-size: 15px;
+            line-height: 30px;
+
+            &:hover {
+                background: #67c1f5;
+                color: #fff;
+            }
+        }
+    }
+
+    .banner {
+        width: 940px;
+        height: 337px;
+        position: relative;
+        overflow: hidden;
+        margin-right: 16px;
+        background: url(../img/game_page_background_shadow.png) bottom no-repeat;
+
+        &:hover a {
+            display: inline-block;
+        }
+
+        &>a {
+            display: none;
+
+            &:hover {
+                opacity: 0;
+            }
+        }
+
+        .bannerInner {
+            width: 600px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &>div {
+                display: none;
+                float: left;
+
+                &>img {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 1;
+
+                    .bg {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .uls {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+
+            &>li {
+                border-radius: 50%;
+                float: left;
+                margin-left: 10px;
+                cursor: pointer;
+                height: 10px;
+                width: 10px;
+                text-align: center;
+                margin: 2px;
+                position: relative;
+                background: #ccc;
+            }
+
+            &:hover .bg {
+                background: orangered;
+
+            }
+        }
+    }
+
+    .login-btn {
+        margin-bottom: 16px;
+        padding: 16px;
+        font-size: 12px;
+        color: #c6d4df;
+        background: rgba(0, 0, 0, 0.2);
+
+        &>a {
+            color: #ffffff;
+        }
+    }
+
+    .main-l {
+        float: left;
+        margin-right: 18px;
+        .serious {
+            border-radius: 6px;
+            width: 616px;
+            background: url(../img/dev5.png);
+            height: 54px;
+            transition: filter 0.5s ease, transform 0.5s ease;
+            background-size: cover;
+            background-position-y: 50%;
+            opacity: 0.5;
+
+            &:hover {
+                box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+                height: 54px;
+                color: #ffffff;
+                font-weight: 300;
+                text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+                border-radius: 6px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                background-color: rgba(39, 67, 88, 1);
+            }
+
+            &>p {
+                height: 38px;
+                padding-top: 16px;
+                padding-left: 16px;
+                color: #ffffff;
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 15px;
+                border-radius: 6px;
+            }
+        }
+
+        .buy-this {
+            width: 616px;
+            position: relative;
+            margin: 28px 0;
+            background: linear-gradient(135deg, rgba(97, 100, 101, 0.3) 0%, rgba(226, 244, 255, 0.3) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d616465', endColorstr='#4de2f4ff', GradientType=1);
+            font-size: 12px;
+            color: #c6d4df;
+            padding: 16px;
+            padding-bottom: 26px;
+
+            &>h2 {
+                font-size: 21px;
+                font-weight: normal;
+                color: #ffffff;
+                font-weight: normal;
+                background: url(../img/icon_platform_win.png) no-repeat right;
+            }
+
+            &>i {
+                font-style: normal;
+                margin-bottom: 8px;
+                color: #7cb8e4;
+            }
+
+            &>p {
+                color: #b0aeac;
+                margin-bottom: 8px;
+
+            }
+        }
+
+        .buy-btn {
+            height: 32px;
+            vertical-align: bottom;
+            background-color: #000000;
+            padding: 2px 2px 2px 2px;
+            border-radius: 2px;
+            position: absolute;
+            right: 16px;
+            bottom: -17px;
+            text-align: right;
+
+            &>div {
+                float: left;
+            }
+
+            .discount {
+                height: 32px;
+                line-height: 32px;
+                font-size: 25px;
+                text-align: center;
+                padding: 0 6px;
+                color: #a4d007;
+                background: #4c6b22;
+            }
+
+            .money {
+                padding-left: 8px;
+                padding-right: 6px;
+                font-size: 14px;
+
+                .oldmoney {
+                    font-size: 11px;
+                    text-decoration: line-through;
+                    color: #626366;
+                }
+
+                .nowmoney {
+                    color: #acdbf5;
+                }
+            }
+
+            .addtoCar {
+                padding: 0 15px;
+                font-size: 15px;
+                line-height: 30px;
+                background: linear-gradient(to bottom, rgba(121, 153, 5, 1) 5%, rgba(83, 105, 4, 1) 95%);
+                border-radius: 2px;
+                border: none;
+                padding: 1px;
+                cursor: pointer;
+                color: #D2E885;
+            }
+
+        }
+    }
+
+    .main-r {
+        // margin-top: 16px;
+        overflow: hidden;
+        margin-left: 14px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+        .interest {
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 18px;
+        }
+
+        .like {
+            padding: 16px;
+            padding-left: 28px;
+            margin-bottom: 8px;
+
+            .tip::before {
+                content: ' ';
+                margin-left: -20px;
+                position: absolute;
+                display: inline-block;
+                vertical-align: top;
+                width: 16px;
+                height: 16px;
+                background-image: url(../img/game_reasons_for.png);
+            }
+
+            &>p {
+                color: #969696;
+                font-size: 14px;
+                line-height: 16px;
+                vertical-align: top;
+                margin-bottom: 3px;
+            }
+
+            &>hr {
+                height: 1px;
+                margin: 10px 0;
+                border: none;
+                background-color: #273747;
+            }
+
+            .tag {
+                display: inline-block;
+                line-height: 19px;
+                padding: 0 7px;
+                color: #67c1f5;
+                background-color: rgba(103, 193, 245, 0.2);
+                box-shadow: none;
+                margin-right: 2px;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-bottom: 3px;
+            }
+
+
+        }
+    }
+
+
+}
