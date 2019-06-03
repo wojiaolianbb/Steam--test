@@ -34,7 +34,7 @@ $(function () {
     }
     // 除了密码外所有的input内容填写正确
     $("input[id!='checkpass']").on("keyup", function () {
-
+        
         if (reg[this.id].test(this.value)) {
             this.dataset.pass = "true";
             $(this).next().html('✔');

@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+
+#ban-nav {
+    margin: 0 auto;
+    background: rgba(62, 126, 167, 0.8);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+
+    .ban-navbox {
+        margin: 30px;
+
+        &>li {
+            position: relative;
+            padding: 0 15px;
+            float: left;
+            border-right: 1px solid rgba(16, 21, 25, 0.3);
+
+            &:hover .subnav {
+                display: block
+            }
+
+            &:hover {
+                background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+            }
+
+            &:hover>a {
+                color: #000;
+                text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.25);
+            }
+
+            .subnav {
+                position: absolute;
+                left: 0;
+                box-shadow: 0 0 12px #000000;
+                background: linear-gradient(to bottom, #e3eaef 5%, #c7d5e0 95%);
+                padding: 8px 5px 8px 5px;
+                display: none;
+                z-index: 10;
+
+                i {
+                    display: block;
+                    margin: 5px 0px;
+                    background-color: #fff;
+                    height: 1px;
+                }
+
+                &>li {
+                    &:hover {
+                        background: #212d3d;
+                    }
+
+                    &:hover>a {
+                        color: #fff;
+                    }
+
+                    .li-blue {
+                        color: #4f94bc;
+                    }
+
+                    a {
+                        padding: 0 15px;
+                        white-space: nowrap;
+                        color: #000;
+                        display: block;
+                        font-size: 13px;
+                        font-weight: normal;
+                    }
+
+                }
+
+            }
+
+            span {
+                background: url(../img/btn_arrow_down_padded_white.png) no-repeat center;
+                width: 19px;
+                height: 12px;
+                display: inline-block;
+                cursor: pointer;
+                vertical-align: text-bottom;
+            }
+
+            .no-pic {
+                background: none;
+            }
+
+            a {
+                color: #d9dadd;
+                font-size: 13px;
+                line-height: 34px;
+                font-weight: 300;
+            }
+
+
+        }
+
+        .ban-search {
+            float: right;
+            margin: 3px 3px 0 0;
+            position: relative;
+
+            input {
+
+                font-style: italic;
+                background-color: #316282;
+                border-radius: 3px;
+                border: 1px solid rgba(0, 0, 0, 0.3);
+                color: #0e1c25;
+                font-size: 14px;
+                width: 180px;
+                height: 26px;
+                line-height: 26px;
+                padding: 0px 6px;
+
+                &:focus {
+                    &::-webkit-input-placeholder {
+                        color: rgba(0, 0, 0, 0)
+                    }
+                }
+
+            }
+
+            i {
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                top: 1px;
+                right: 3px;
+                background-image: url(../img/search_icon_btn.png);
+            }
+        }
+    }
+}
+
+.cartitle {
+    color: #8f98a0;
+    font-size: 12px;
+
+    h2 {
+        color: #ffffff;
+        font-size: 34px;
+        font-weight: 300;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+        margin-top: 4px;
+        margin-bottom: 10px;
+    }
+
+    // .tips {
+    //     background: url(../img/cluster_bg_2.png) bottom center no-repeat;
+    //     padding-bottom: 64px;
+    //     margin-top: -30px;
+    // }
+}
+
+#cardetail {
+
+    .game-detail {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 16px;
+
+        &>div {
+            float: left;
+        }
+
+        .game-name {
+            font-size: 12px;
+            text-decoration: none;
+            padding: 0 3% 0 3%;
+            color: #c7d5e0;
+            background: url(../img/icon_platform_win.png)no-repeat right center;
+            width: 60%;
+        }
+
+        .game-price {
+            padding: 0 10px;
+            color: #c7d5e0;
+            font-size: 14px;
+            text-align: right;
+
+            &>.delete-game {
+                color: #56707f;
+                text-decoration: underline;
+                line-height: 16px;
+            }
+        }
+    }
+
+    .comfire {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        margin-top: 3px;
+
+        .line {
+            border-top: 1px solid #194660;
+            margin: 15px 0px;
+        }
+
+        .com-price {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #c7d5e0;
+            font-weight: bold;
+            padding-right: 150px;
+            text-align: right;
+
+            &>span {
+                padding-left: 100px;
+            }
+        }
+
+        .com-tip {
+            color: #ffcc6a;
+            padding-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .com-pay {
+            padding-bottom: 15px;
+            font-size: 13px;
+            color: #c6d4df;
+        }
+
+        .com-btn>button {
+            border-radius: 2px;
+            text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.1);
+            border: none;
+            padding: 0 15px;
+            font-size: 15px;
+            line-height: 30px;
+            color: #D2E885;
+            background: linear-gradient(to bottom, rgba(121, 153, 5, 1) 5%, rgba(83, 105, 4, 1) 95%);
+            float: right;
+            margin-left: 15px;
+        }
+    }
+
+    .del-all {
+        float: right;
+        color: #56707f;
+        text-decoration: underline;
+        font-size: 12px;
+    }
+    .continue>button{
+        padding: 0 15px;
+        font-size: 15px;
+        line-height: 30px;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+        color: #67c1f5;
+        background: rgba( 103, 193, 245, 0.2 );
+        margin:10px 0;
+    }
+}

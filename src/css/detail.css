@@ -300,13 +300,13 @@
   color: #acdbf5;
 }
 #main-page .main-l .buy-btn .addtoCar {
-  padding: 0 15px;
+  display: inline-block;
+  padding: 1.5px 15px;
   font-size: 15px;
   line-height: 30px;
   background: linear-gradient(to bottom, #799905 5%, #536904 95%);
   border-radius: 2px;
   border: none;
-  padding: 1px;
   cursor: pointer;
   color: #D2E885;
 }
