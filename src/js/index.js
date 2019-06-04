@@ -62,9 +62,9 @@
 
 
         $("img.lazy").lazyload({
-            effect: "fadeIn",
+            // effect: "fadeIn",
             placeholder : "../img/timg.gif",
-            threshold: 200
+            // threshold: 200
         });
 
     })
