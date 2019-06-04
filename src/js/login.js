@@ -1,6 +1,14 @@
 ;
 $(function () {
     // 登陆
+    if (cookie.get("username")) {
+        $(".login-1>a").html(cookie.get("username"))
+    }
+    $(".login-out").on("click", function () {
+        location.href="../html/index.html"
+        alert('点击确认退出')
+        cookie.remove("username")
+    })
     $(".login-in").on("click", function () {
         let src = document.createElement("script")
         src.src = "http://127.0.0.1:8080/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";

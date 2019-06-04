@@ -5,7 +5,11 @@
         if (cookie.get("username")) {
             $(".login-1>a").html(cookie.get("username"))
         }
-
+        $(".login-out").on("click", function () {
+            location.href="../html/index.html"
+            alert('点击确认退出')
+            cookie.remove("username")
+        })
 
         // 轮播调用
         $('.main-home .slider').slider()

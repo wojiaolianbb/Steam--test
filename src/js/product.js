@@ -1,9 +1,14 @@
 ;
 $(function () {
     // 登陆状态
-    $(".login-1>a").html(cookie.get("username"))
-
-
+    if (cookie.get("username")) {
+        $(".login-1>a").html(cookie.get("username"))
+    }
+    $(".login-out").on("click", function () {
+        location.href="../html/index.html"
+        alert('点击确认退出')
+        cookie.remove("username")
+    })
     let id = location.search.split('=')[1];
     let jsonData = [{
             "img": "../img/detail.jpg"
