@@ -5,7 +5,7 @@ $(function () {
         $(".login-1>a").html(cookie.get("username"))
     }
     $(".login-out").on("click", function () {
-        location.href="../html/index.html"
+        location.href = "../html/index.html"
         alert('点击确认退出')
         cookie.remove("username")
     })

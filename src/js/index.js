@@ -1,16 +1,6 @@
     ;
     $(function () {
 
-        // 登陆状态
-        if (cookie.get("username")) {
-            $(".login-1>a").html(cookie.get("username"))
-        }
-        $(".login-out").on("click", function () {
-            location.href="../html/index.html"
-            alert('点击确认退出')
-            cookie.remove("username")
-        })
-
         // 轮播调用
         $('.main-home .slider').slider()
 
@@ -59,5 +49,22 @@
             $('.main-home-5>div').eq(index).addClass('show').siblings().removeClass('show');
         })
 
+        // 登陆状态
+        if (cookie.get("username")) {
+            $(".login-1>a").html(cookie.get("username"))
+        }
+        $(".login-out").on("click", function () {
+            location.href = "../html/index.html"
+            alert('点击确认退出')
+            cookie.remove("username")
+        })
+
+
+
+        $("img.lazy").lazyload({
+            effect: "fadeIn",
+            placeholder : "../img/timg.gif",
+            threshold: 200
+        });
 
     })

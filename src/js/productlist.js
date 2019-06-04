@@ -1,12 +1,5 @@
 $(function () {
-    if (cookie.get("username")) {
-        $(".login-1>a").html(cookie.get("username"))
-    }
-    $(".login-out").on("click", function () {
-        location.href="../html/index.html"
-        alert('点击确认退出')
-        cookie.remove("username")
-    })
+
     var shop = cookie.get("shop");
     var price = [];
     if (shop) {
@@ -79,5 +72,27 @@ $(function () {
     })
     $(".continue").on("click", function () {
         location.href = "../html/index.html"
+    })
+
+    if (cookie.get("username")) {
+        $(".login-1>a").html(cookie.get("username"))
+    }
+    $(".login-out").on("click", function () {
+        location.href = "../html/index.html"
+        alert('点击确认退出')
+        cookie.remove("username")
+    })
+
+    $(".for-self").on("click", function () {
+        alert("购买成功~点击开始玩游戏吧~");
+        alert("别太小气啦，给朋友也买一份一起玩呗")
+        location.href="../html/index.html"
+        cookie.remove("shop");
+    })
+    $(".for-girt").on("click", function () {
+        alert("购买成功.");
+        alert("你真是太棒啦")
+        location.href="../html/index.html"
+        cookie.remove("shop");
     })
 })
