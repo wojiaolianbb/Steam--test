@@ -1,27 +1,27 @@
 ;
 $(function () {
     // 登陆
-    // $(".login-in").on("click", function () {
-    //     let src = document.createElement("script")
-    //     src.src = "http://127.0.0.1:8080/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";
-    //     // src.src = "E:/1.培训/JS/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";        document.body.appendChild(src);
-    //     document.body.appendChild(src);
+    $(".login-in").on("click", function () {
+        let src = document.createElement("script")
+        src.src = "http://127.0.0.1:8080/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";
+        // src.src = "E:/1.培训/JS/program/steam/src/lib/checkname.php?username=" + $("#username").val() + "&password=" + $("#password").val() + "&callback=callback";        document.body.appendChild(src);
+        document.body.appendChild(src);
 
-    //     function callback(data) {
-    //         if (data.has) {
-    //             alert("登陆成功,3秒后跳转")
-    //             setTimeout(() => {
-    //                 location.href = "../html/index.html"
-    //             }, 2000)
-    //         } else {
-    //             alert("登陆失败，点击加入我们注册使用!")
-    //         }
+        function callback(data) {
+            if (data.has) {
+                alert("登陆成功,3秒后跳转")
+                setTimeout(() => {
+                    location.href = "../html/index.html"
+                }, 2000)
+            } else {
+                alert("登陆失败，点击加入我们注册使用!")
+            }
 
-    //     }
-    //     window.callback = callback;
-    //     cookie.set("username", $("#username").val(), 7)
-    //     $(".login-1>a").html(cookie.get("username"))
-    // })
+        }
+        window.callback = callback;
+        cookie.set("username", $("#username").val(), 7)
+        $(".login-1>a").html(cookie.get("username"))
+    })
 
 
 

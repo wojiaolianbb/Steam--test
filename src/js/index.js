@@ -2,7 +2,10 @@
     $(function () {
 
         // 登陆状态
-        $(".login-1>a").html(cookie.get("username"))
+        if (cookie.get("username")) {
+            $(".login-1>a").html(cookie.get("username"))
+        }
+
 
         // 轮播调用
         $('.main-home .slider').slider()
