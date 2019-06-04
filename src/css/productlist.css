@@ -116,10 +116,13 @@
   background: rgba(0, 0, 0, 0.2);
   padding: 16px;
 }
-#cardetail .game-detail > div {
+#cardetail .game-detail .game1 {
+  margin-top: 5px;
+}
+#cardetail .game-detail .game1 > div {
   float: left;
 }
-#cardetail .game-detail .game-name {
+#cardetail .game-detail .game1 .game-name {
   font-size: 12px;
   text-decoration: none;
   padding: 0 3% 0 3%;
@@ -127,16 +130,18 @@
   background: url(../img/icon_platform_win.png) no-repeat right center;
   width: 60%;
 }
-#cardetail .game-detail .game-price {
+#cardetail .game-detail .game1 .game-price {
   padding: 0 10px;
   color: #c7d5e0;
   font-size: 14px;
   text-align: right;
 }
-#cardetail .game-detail .game-price > .delete-game {
+#cardetail .game-detail .game1 .game-price .delete-game {
   color: #56707f;
-  text-decoration: underline;
-  line-height: 16px;
+  cursor: pointer;
+}
+#cardetail .game-detail .game1 .game-price .delete-game:hover {
+  color: #fff;
 }
 #cardetail .comfire {
   background: rgba(0, 0, 0, 0.2);
@@ -185,6 +190,10 @@
   color: #56707f;
   text-decoration: underline;
   font-size: 12px;
+  cursor: pointer;
+}
+#cardetail .del-all:hover {
+  color: #fff;
 }
 #cardetail .continue > button {
   padding: 0 15px;

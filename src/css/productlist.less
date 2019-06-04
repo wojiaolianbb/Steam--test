@@ -157,31 +157,39 @@
         background: rgba(0, 0, 0, 0.2);
         padding: 16px;
 
-        &>div {
-            float: left;
-        }
+        .game1 {
+            margin-top: 5px;
 
-        .game-name {
-            font-size: 12px;
-            text-decoration: none;
-            padding: 0 3% 0 3%;
-            color: #c7d5e0;
-            background: url(../img/icon_platform_win.png)no-repeat right center;
-            width: 60%;
-        }
+            &>div {
+                float: left;
+            }
 
-        .game-price {
-            padding: 0 10px;
-            color: #c7d5e0;
-            font-size: 14px;
-            text-align: right;
+            .game-name {
+                font-size: 12px;
+                text-decoration: none;
+                padding: 0 3% 0 3%;
+                color: #c7d5e0;
+                background: url(../img/icon_platform_win.png)no-repeat right center;
+                width: 60%;
+            }
 
-            &>.delete-game {
-                color: #56707f;
-                text-decoration: underline;
-                line-height: 16px;
+            .game-price {
+                padding: 0 10px;
+                color: #c7d5e0;
+                font-size: 14px;
+                text-align: right;
+
+                .delete-game {
+                    color: #56707f;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                    }
+                }
             }
         }
+
     }
 
     .comfire {
@@ -238,8 +246,15 @@
         color: #56707f;
         text-decoration: underline;
         font-size: 12px;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+        }
+
     }
-    .continue>button{
+
+    .continue>button {
         padding: 0 15px;
         font-size: 15px;
         line-height: 30px;
@@ -247,7 +262,7 @@
         border: none;
         cursor: pointer;
         color: #67c1f5;
-        background: rgba( 103, 193, 245, 0.2 );
-        margin:10px 0;
+        background: rgba(103, 193, 245, 0.2);
+        margin: 10px 0;
     }
 }

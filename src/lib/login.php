@@ -1,6 +1,6 @@
 <?php
     // 引入php文件
-    include('./conntct.php');
+    include('./connect.php');
 
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];

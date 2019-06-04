@@ -1,5 +1,5 @@
 <?php
-    include('./conntct.php');
+    include('./connect.php');
 
     $id = $_REQUEST['id'];
 

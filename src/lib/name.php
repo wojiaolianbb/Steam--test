@@ -2,10 +2,9 @@
     include('./connect.php');
 
     $username = $_REQUEST['username'];
-    $password = $_REQUEST['password'];   
     $callback = $_REQUEST['callback'];
 
-    $sql = "select * from userdate where user_name='$username' and user_pwd='$password'";
+    $sql = "select * from userdate where user_name='$username'";
 
     $res = $mysqli->query($sql);
     

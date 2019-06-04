@@ -1,4 +1,9 @@
+;
 $(function () {
+    // 登陆状态
+    $(".login-1>a").html(cookie.get("username"))
+
+
     let id = location.search.split('=')[1];
     let jsonData = [{
             "img": "../img/detail.jpg"
@@ -90,32 +95,34 @@ $(function () {
                 </div>
             </div>
             `;
-            mainl.append(template3)
-
-
-            //轮播图效果
-            // var jpg = response.pic.split(",")
-            // let jsonData = [{
-            //         "img": "../img/header_292x136 (1)01.jpg"
-            //     },
-            //     {
-            //         "img": "../img/detail2.jpg"
-            //     },
-            //     {
-            //         "img": "../img/detail3.jpg"
-            //     },
-            //     {
-            //         "img": "../img/detail4.jpg"
-            //     },
-            //     {
-            //         "img": "../img/detail5.jpg"
-            //     }
-            // ]
-            // let bannerAuto = new autoPlay("banner", 600, 337, jsonData, "slide");
+            mainl.append(template3).find(".addtoCar").on("click", function () {
+                addShopCar(response.id, response.price);
+                location.href = "../html/productlist.html"
+            })
         }
     });
-    $("body").on("click", ".addtoCar", function () {
-        let id = location.search.split('=')[1];
-        location.href = "../html/productlist.html?id=" + id
-    })
+
+    function addShopCar(id, price) {
+        var shop = cookie.get('shop'); //从cookie获取shop
+        var product = {
+            "id": id,
+            "price": price,
+        };
+        if (shop) {
+            shop = JSON.parse(shop); // cookie中如果有数据 这个数据是json字符串 转成对象
+
+            if (shop.some(elm => elm.id == id)) {
+                shop.forEach(function (elm, i) {
+                    elm.id == id ? elm.num = 1 : null;
+                });
+            } else {
+                shop.push(product);
+            }
+            cookie.set('shop', JSON.stringify(shop), 1);
+        } else {
+            shop = [];
+            shop.push(product);
+            cookie.set('shop', JSON.stringify(shop), 1);
+        }
+    }
 })

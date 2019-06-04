@@ -1,12 +1,14 @@
 <?php
     include('./connect.php');
 
-    $sql = "select * from product";
+    $idList = $_REQUEST['idList'];
 
-    $res = $mysqli->query($sql);
+    $sql = "select * from product where id in ($idList)";
+
+    $res = $mysqli -> query($sql);
 
     $arr = array();
-
+    
     while($row = $res->fetch_assoc()){
         array_push($arr,$row);
     }
